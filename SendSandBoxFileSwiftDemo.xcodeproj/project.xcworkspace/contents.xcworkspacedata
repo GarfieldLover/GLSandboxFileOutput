@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:GLSandboxFileOutput.xcodeproj">
+      location = "self:SendSandBoxFileSwiftDemo.xcodeproj">
    </FileRef>
 </Workspace>

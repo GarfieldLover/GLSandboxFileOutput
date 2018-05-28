@@ -1,9 +1,9 @@
 //
 //  AppDelegate.swift
-//  GLSandboxFileOutput
+//  SendSandBoxFileSwiftDemo
 //
-//  Created by ZK on 2017/2/28.
-//  Copyright © 2017年 ZK. All rights reserved.
+//  Created by ZK on 2017/12/20.
+//  Copyright © 2017年 HL. All rights reserved.
 //
 
 import UIKit
@@ -16,6 +16,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        NSLog("%@", NSHomeDirectory());
+        
+        var documentPath:String = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory, FileManager.SearchPathDomainMask.userDomainMask, true).first!;
+        documentPath = documentPath+String("/test.txt");
+        
+        let path = Bundle.main.path(forResource: "test", ofType: "txt");
+        let testText = try? String.init(contentsOfFile: path!, encoding: String.Encoding.utf8);
+        try? testText?.write(toFile: documentPath, atomically: true, encoding: String.Encoding.utf8);
+        
         return true
     }
 
