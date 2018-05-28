@@ -1,6 +1,6 @@
 # SendSandBoxFileSwift
 
-一行代码 沙盒 SandBox ,文件利用Email, AirDrop, WebView，发送到电脑或者邮箱里。比如图片，视频，其他类型文件
+iOS8沙盒机制更新后无法查本地文件，给开发带来困扰。使用本库可以把沙盒中文件通过AirDrop、QQ、邮件发送出来，支持多选文件、发文件夹。
 
 
 ```
