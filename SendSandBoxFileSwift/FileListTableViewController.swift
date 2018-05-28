@@ -334,7 +334,7 @@ class FileListTableViewController: UITableViewController,MFMailComposeViewContro
         var folderSize:CLongLong = 0;
         while (fileName != nil) {
             let filePath = String.init(format: "%@/%@", folderPath, fileName!);
-            let fileAbsolutePath:String = filePath as String!;
+            let fileAbsolutePath:String = (filePath as String?)!;
             folderSize += FileListTableViewController.fileSizeAtPath(filePath:fileAbsolutePath);
             fileName = childFilesEnumerator.nextObject() as? String;
         }
